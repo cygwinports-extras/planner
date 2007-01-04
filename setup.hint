@@ -1,0 +1,5 @@
+category: Gnome
+requires: cygwin GConf2 gdk-pixbuf2 glib2 gnome-vfs2 gtk2-x11 libart_lgpl2 libgda2 libgda2-provider-postgres libglade2 libgnome2 libgnomecanvas2 libgnomeprint22 libgnomeprintui22 libgnomeui2 libintl8 libxml2 libxslt pango pygtk2 python
+sdesc: "GNOME project management tool"
+ldesc: "Planner is a project managment tool for the GNOME desktop, for 
+planning, scheduling and tracking projects."
