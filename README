@@ -5,28 +5,28 @@ scheduling and tracking projects.
 
 Runtime requirements:
   cygwin-1.5.25-11
-  GConf2-2.20.1-1
-  atk-1.20.0-1
-  evolution-data-server-1.12.3-1
+  GConf2-2.22.0-1
+  atk-1.22.0-1
+  evolution-data-server-2.22.2-1
   gdk-pixbuf2-2.12.9-1
-  glib2-2.14.6-1
-  gnome-vfs2-2.20.1-1
+  glib2-2.16.3-1
+  gnome-vfs2-2.22.0-1
   gtk2-x11-2.12.9-1
   libart_lgpl2-2.3.20-1
   libgda30-3.0.4-1
   libgda30-provider-postgres-3.0.4-1
   libglade2-2.6.2-1
-  libgnome2-2.20.1.1-1
+  libgnome2-2.22.0-1
   libgnomecanvas2-2.20.1.1-1
   libgnomeprint22-2.18.4-1
   libgnomeprintui22-2.18.2-1
-  libgnomeui2-2.20.1.1-1
+  libgnomeui2-2.22.1-1
   libintl8-0.15-1
   libxml2-2.6.32-1
   libxslt-1.1.23-1
-  pango-1.18.4-1
+  pango-1.20.3-1
   python-2.5.2-1
-  python-gobject2-2.14.1-1
+  python-gobject2-2.14.2-1
   python-gtk2-2.12.1-1
 
 Build requirements:
@@ -37,13 +37,13 @@ Build requirements:
   cygport-0.3.9-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gnome-common-2.20.0-1
-  gtk-doc-1.9-1
-  intltool-0.36.3-1
+  gnome-common-2.20.0-2
+  gtk-doc-1.10-1
+  intltool-0.37.1-1
   libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
-  rarian-0.6.0-1
+  rarian-0.8.0-1
   sed-4.1.5-2
 
 Canonical website:
@@ -373,6 +373,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.14.3-2 -----
+Rebuilt for e-d-s 2.22.
 
 ----- version 0.14.3-1 -----
 Version bump.

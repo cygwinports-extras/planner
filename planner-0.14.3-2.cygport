@@ -1,0 +1,14 @@
+inherit gnome2
+
+DESCRIPTION="GNOME project management tool"
+HOMEPAGE="http://live.gnome.org/Planner"
+
+DIFF_EXCLUDES="libplanner-1.pc"
+
+CYGCONF_ARGS="
+	--disable-update-mimedb
+	--enable-database
+	--enable-eds
+	--enable-python
+	--enable-python-plugin
+"
