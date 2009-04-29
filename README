@@ -4,46 +4,44 @@ Planner is a project managment tool for the GNOME desktop, for planning,
 scheduling and tracking projects.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  GConf2-2.22.0-1
-  atk-1.22.0-1
-  evolution-data-server-2.22.2-1
-  gdk-pixbuf2-2.12.9-1
-  glib2-2.16.3-1
-  gnome-vfs2-2.22.0-1
-  gtk2-x11-2.12.9-1
-  libart_lgpl2-2.3.20-1
-  libgda30-3.0.4-1
-  libgda30-provider-postgres-3.0.4-1
-  libglade2-2.6.2-1
-  libgnome2-2.22.0-1
-  libgnomecanvas2-2.20.1.1-1
-  libgnomeprint22-2.18.4-1
-  libgnomeprintui22-2.18.2-1
-  libgnomeui2-2.22.1-1
-  libintl8-0.15-1
-  libxml2-2.6.32-1
-  libxslt-1.1.23-1
-  pango-1.20.3-1
-  python-2.5.2-1
-  python-gobject2-2.14.2-1
-  python-gtk2-2.12.1-1
+  cygwin-1.7.0-45
+  libart_lgpl_2_2-2.3.20-10
+  libatk1.0_0-1.26.0-1
+  libcairo2-1.8.6-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgda3.0_3-3.0.4-10
+  libgda3.0-provider-postgres-3.0.4-10
+  libgdk_pixbuf2.0_0-2.16.1-1
+  libglade2.0_0-2.6.4-1
+  libglib2.0_0-2.20.1-1
+  libgnome2_0-2.26.0-1
+  libgnomecanvas2_0-2.26.0-1
+  libgnomeui2_0-2.24.1-1
+  libgtk2.0_0-2.16.1-1
+  libintl8-0.17-10
+  libpango1.0_0-1.24.1-1
+  libxml2-2.7.3-10
+  libxslt-1.1.24-10
+  python-2.5.4-10
+  python-gobject2-2.16.1-10
+  python-gtk2-2.14.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.9-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.20.0-2
-  gtk-doc-1.10-1
-  intltool-0.37.1-1
-  libtool-2.2.2-2
-  make-3.81-1
-  pkg-config-0.21-1
-  rarian-0.8.0-1
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  gtk-doc-1.11-2
+  intltool-0.40.6-1
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
+  rarian-0.8.1-10
   sed-4.1.5-2
 
 Canonical website:
@@ -55,57 +53,37 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack planner-0.14.3-X-src.tar.bz2
+  unpack planner-0.14.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./planner-0.14.3-X.cygport all
+  cygport ./planner-0.14.4-X.cygport all
 
 This will create:
-  /usr/src/planner-0.14.3-X-src.tar.bz2
-  /usr/src/planner-0.14.3-X.tar.bz2
+  /usr/src/planner-0.14.4-X-src.tar.bz2
+  /usr/src/planner-0.14.4-X.tar.bz2
+  /usr/src/planner-devel-0.14.4-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+(planner)
   /etc/gconf/schemas/planner.schemas
   /etc/postinstall/planner.sh
   /etc/preremove/planner.sh
   /usr/bin/cygplanner-1-0.dll
+  /usr/bin/cygplannerapp.dll
   /usr/bin/planner.exe
-  /usr/include/planner-1.0/libplanner/mrp-application.h
-  /usr/include/planner-1.0/libplanner/mrp-assignment.h
-  /usr/include/planner-1.0/libplanner/mrp-calendar.h
-  /usr/include/planner-1.0/libplanner/mrp-day.h
-  /usr/include/planner-1.0/libplanner/mrp-error.h
-  /usr/include/planner-1.0/libplanner/mrp-group.h
-  /usr/include/planner-1.0/libplanner/mrp-object.h
-  /usr/include/planner-1.0/libplanner/mrp-paths.h
-  /usr/include/planner-1.0/libplanner/mrp-project.h
-  /usr/include/planner-1.0/libplanner/mrp-property.h
-  /usr/include/planner-1.0/libplanner/mrp-relation.h
-  /usr/include/planner-1.0/libplanner/mrp-resource.h
-  /usr/include/planner-1.0/libplanner/mrp-storage-module.h
-  /usr/include/planner-1.0/libplanner/mrp-task.h
-  /usr/include/planner-1.0/libplanner/mrp-time.h
-  /usr/include/planner-1.0/libplanner/mrp-types.h
-  /usr/include/planner-1.0/libplanner/planner.h
-  /usr/lib/libplanner-1.dll.a
-  /usr/lib/libplanner-1.la
-  /usr/lib/libplanner-plugin.a
-  /usr/lib/pkgconfig/libplanner-1.pc
   /usr/lib/planner/file-modules/cygmrp-xml.dll
   /usr/lib/planner/file-modules/cygmrp-xsl.dll
   /usr/lib/planner/file-modules/libmrp-xml.la
   /usr/lib/planner/file-modules/libmrp-xsl.la
-  /usr/lib/planner/plugins/cygeds-plugin.dll
   /usr/lib/planner/plugins/cyghtml-plugin.dll
   /usr/lib/planner/plugins/cygmsp-plugin.dll
   /usr/lib/planner/plugins/cygpython-plugin.dll
   /usr/lib/planner/plugins/cygsql-plugin.dll
   /usr/lib/planner/plugins/cygxmlplanner-plugin.dll
-  /usr/lib/planner/plugins/libeds-plugin.la
   /usr/lib/planner/plugins/libhtml-plugin.la
   /usr/lib/planner/plugins/libmsp-plugin.la
   /usr/lib/planner/plugins/libpython-plugin.la
@@ -120,12 +98,11 @@ Files included in the binary package:
   /usr/lib/python2.5/site-packages/plannerui.dll
   /usr/lib/python2.5/site-packages/plannerui.la
   /usr/share/applications/planner.desktop
-  /usr/share/doc/planner-0.14.3/AUTHORS
-  /usr/share/doc/planner-0.14.3/COPYING
-  /usr/share/doc/planner-0.14.3/ChangeLog
-  /usr/share/doc/planner-0.14.3/INSTALL
-  /usr/share/doc/planner-0.14.3/NEWS
-  /usr/share/doc/planner-0.14.3/README
+  /usr/share/doc/planner/AUTHORS
+  /usr/share/doc/planner/COPYING
+  /usr/share/doc/planner/ChangeLog
+  /usr/share/doc/planner/NEWS
+  /usr/share/doc/planner/README
   /usr/share/doc/planner/README.sql
   /usr/share/doc/planner/kitchen.planner
   /usr/share/doc/planner/sample-1.planner
@@ -223,29 +200,6 @@ Files included in the binary package:
   /usr/share/gnome/help/planner/eu/figures/task-view.png
   /usr/share/gnome/help/planner/eu/legal.xml
   /usr/share/gnome/help/planner/eu/planner.xml
-  /usr/share/gtk-doc/html/libplanner/MrpAssignment.html
-  /usr/share/gtk-doc/html/libplanner/MrpCalendar.html
-  /usr/share/gtk-doc/html/libplanner/MrpGroup.html
-  /usr/share/gtk-doc/html/libplanner/MrpObject.html
-  /usr/share/gtk-doc/html/libplanner/MrpProject.html
-  /usr/share/gtk-doc/html/libplanner/MrpResource.html
-  /usr/share/gtk-doc/html/libplanner/MrpTask.html
-  /usr/share/gtk-doc/html/libplanner/ch01.html
-  /usr/share/gtk-doc/html/libplanner/home.png
-  /usr/share/gtk-doc/html/libplanner/index.html
-  /usr/share/gtk-doc/html/libplanner/index.sgml
-  /usr/share/gtk-doc/html/libplanner/left.png
-  /usr/share/gtk-doc/html/libplanner/libplanner-MrpApplication.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-MrpRelation.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-day.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-error.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-property.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-time.html
-  /usr/share/gtk-doc/html/libplanner/libplanner.devhelp
-  /usr/share/gtk-doc/html/libplanner/libplanner.devhelp2
-  /usr/share/gtk-doc/html/libplanner/right.png
-  /usr/share/gtk-doc/html/libplanner/style.css
-  /usr/share/gtk-doc/html/libplanner/up.png
   /usr/share/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-planner.png
   /usr/share/locale/am/LC_MESSAGES/planner.mo
   /usr/share/locale/ar/LC_MESSAGES/planner.mo
@@ -268,6 +222,7 @@ Files included in the binary package:
   /usr/share/locale/fr/LC_MESSAGES/planner.mo
   /usr/share/locale/ga/LC_MESSAGES/planner.mo
   /usr/share/locale/gl/LC_MESSAGES/planner.mo
+  /usr/share/locale/gu/LC_MESSAGES/planner.mo
   /usr/share/locale/hi/LC_MESSAGES/planner.mo
   /usr/share/locale/hr/LC_MESSAGES/planner.mo
   /usr/share/locale/hu/LC_MESSAGES/planner.mo
@@ -282,6 +237,7 @@ Files included in the binary package:
   /usr/share/locale/mk/LC_MESSAGES/planner.mo
   /usr/share/locale/ml/LC_MESSAGES/planner.mo
   /usr/share/locale/mn/LC_MESSAGES/planner.mo
+  /usr/share/locale/mr/LC_MESSAGES/planner.mo
   /usr/share/locale/ms/LC_MESSAGES/planner.mo
   /usr/share/locale/nb/LC_MESSAGES/planner.mo
   /usr/share/locale/ne/LC_MESSAGES/planner.mo
@@ -352,6 +308,7 @@ Files included in the binary package:
   /usr/share/planner/sql/upgrade-0.6.x-0.11.sql
   /usr/share/planner/stylesheets/html1_css.xsl
   /usr/share/planner/stylesheets/html1_css_ie.xsl
+  /usr/share/planner/stylesheets/html1_css_ie7.xsl
   /usr/share/planner/stylesheets/html1_gantt.xsl
   /usr/share/planner/stylesheets/html1_resources.xsl
   /usr/share/planner/stylesheets/html1_tasks.xsl
@@ -370,21 +327,59 @@ Files included in the binary package:
   /usr/share/planner/ui/time-table-view.ui
   /usr/share/planner/ui/xml-planner-plugin.ui
 
+(planner-devel)
+  /usr/include/planner-1.0/libplanner/mrp-application.h
+  /usr/include/planner-1.0/libplanner/mrp-assignment.h
+  /usr/include/planner-1.0/libplanner/mrp-calendar.h
+  /usr/include/planner-1.0/libplanner/mrp-day.h
+  /usr/include/planner-1.0/libplanner/mrp-error.h
+  /usr/include/planner-1.0/libplanner/mrp-group.h
+  /usr/include/planner-1.0/libplanner/mrp-object.h
+  /usr/include/planner-1.0/libplanner/mrp-paths.h
+  /usr/include/planner-1.0/libplanner/mrp-project.h
+  /usr/include/planner-1.0/libplanner/mrp-property.h
+  /usr/include/planner-1.0/libplanner/mrp-relation.h
+  /usr/include/planner-1.0/libplanner/mrp-resource.h
+  /usr/include/planner-1.0/libplanner/mrp-storage-module.h
+  /usr/include/planner-1.0/libplanner/mrp-task.h
+  /usr/include/planner-1.0/libplanner/mrp-time.h
+  /usr/include/planner-1.0/libplanner/mrp-types.h
+  /usr/include/planner-1.0/libplanner/planner.h
+  /usr/lib/libplanner-1.dll.a
+  /usr/lib/libplanner-1.la
+  /usr/lib/libplannerapp.dll.a
+  /usr/lib/libplannerapp.la
+  /usr/lib/pkgconfig/libplanner-1.pc
+  /usr/share/gtk-doc/html/libplanner/MrpAssignment.html
+  /usr/share/gtk-doc/html/libplanner/MrpCalendar.html
+  /usr/share/gtk-doc/html/libplanner/MrpGroup.html
+  /usr/share/gtk-doc/html/libplanner/MrpObject.html
+  /usr/share/gtk-doc/html/libplanner/MrpProject.html
+  /usr/share/gtk-doc/html/libplanner/MrpResource.html
+  /usr/share/gtk-doc/html/libplanner/MrpTask.html
+  /usr/share/gtk-doc/html/libplanner/ch01.html
+  /usr/share/gtk-doc/html/libplanner/home.png
+  /usr/share/gtk-doc/html/libplanner/index.html
+  /usr/share/gtk-doc/html/libplanner/index.sgml
+  /usr/share/gtk-doc/html/libplanner/left.png
+  /usr/share/gtk-doc/html/libplanner/libplanner-MrpApplication.html
+  /usr/share/gtk-doc/html/libplanner/libplanner-MrpRelation.html
+  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-day.html
+  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-error.html
+  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-property.html
+  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-time.html
+  /usr/share/gtk-doc/html/libplanner/libplanner.devhelp
+  /usr/share/gtk-doc/html/libplanner/libplanner.devhelp2
+  /usr/share/gtk-doc/html/libplanner/right.png
+  /usr/share/gtk-doc/html/libplanner/style.css
+  /usr/share/gtk-doc/html/libplanner/up.png
+
 ------------------
 
 Port Notes:
 
------ version 0.14.3-2 -----
-Rebuilt for e-d-s 2.22.
-
------ version 0.14.3-1 -----
-Version bump.
-
------ version 0.14.2-2 -----
-Rebuilt for python-2.5.
-
------ version 0.14.2-1 -----
-Initial release for Cygwin.
+----- version 0.14.4-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

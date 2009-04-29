@@ -1,0 +1,6 @@
+category: Gnome
+requires: cygwin planner libglib2.0-devel gettext libxml2-devel
+external-source: planner
+sdesc: "GNOME project management tool (plugin development)"
+ldesc: "Planner is a project managment tool for the GNOME desktop, for 
+planning, scheduling and tracking projects."

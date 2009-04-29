@@ -1,0 +1,11 @@
+--- origsrc/planner-0.14.4/libplanner-1.pc.in	2008-07-22 08:42:00.000000000 -0500
++++ src/planner-0.14.4/libplanner-1.pc.in	2009-04-28 20:04:32.732750000 -0500
+@@ -5,7 +5,7 @@ includedir=@includedir@
+ 
+ Name: libplanner
+ Description: Support library for Planner
+-Requires: glib-2.0 gmodule-2.0 gobject-2.0 libxml-2.0 libgsf-1
++Requires: glib-2.0 gmodule-2.0 gobject-2.0 libxml-2.0
+ Version: @VERSION@
+ Libs: -L${libdir} -lplanner-1
+ Cflags: -I${includedir}/planner-1.0

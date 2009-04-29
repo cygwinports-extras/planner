@@ -1,0 +1,23 @@
+inherit python gnome2
+
+DESCRIPTION="GNOME project management tool"
+HOMEPAGE="http://live.gnome.org/Planner"
+
+PATCH_URI="0.14.4-no-undefined.patch
+           0.14.3-gtk_recent_manager.patch"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+planner_CONTENTS="etc/ usr/bin/ usr/lib/planner/ ${PYTHON_SITELIB#/} usr/share/"
+planner_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+DISTCLEANFILES="libplanner-1.pc"
+
+CYGCONF_ARGS="
+	--disable-update-mimedb
+	--disable-eds
+	--disable-eds-plugin
+	--enable-python
+	--enable-python-plugin
+	--with-database
+"

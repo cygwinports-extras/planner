@@ -1,0 +1,158 @@
+--- origsrc/planner-0.14.4/eds-backend/Makefile.am	2009-04-28 19:09:03.920250000 -0500
++++ src/planner-0.14.4/eds-backend/Makefile.am	2009-04-28 19:12:22.576500000 -0500
+@@ -16,3 +16,5 @@ libecalbackendplanner_la_SOURCES =			\
+ libecalbackendplanner_la_LIBADD =		 	\
+ 	$(top_builddir)/libplanner/libplanner-1.la 	\
+ 	$(EDS_BACKEND_LIBS)				
++
++libecalbackendplanner_la_LDFLAGS = -module -avoid-version -no-undefined
+--- origsrc/planner-0.14.4/eds-backend/planner-source/Makefile.am	2009-04-28 19:09:03.935875000 -0500
++++ src/planner-0.14.4/eds-backend/planner-source/Makefile.am	2009-04-28 19:12:22.592125000 -0500
+@@ -11,7 +11,7 @@ plugin_LTLIBRARIES = liborg-gnome-planne
+ 
+ 
+ liborg_gnome_planner_source_la_SOURCES = planner-source.c
+-liborg_gnome_planner_source_la_LDFLAGS = -module -avoid-version
++liborg_gnome_planner_source_la_LDFLAGS = -module -avoid-version -no-undefined
+ liborg_gnome_planner_source_la_LIBADD =	 $(EDS_BACKEND_LIBS)
+ 
+ EXTRA_DIST = org-gnome-planner-source.eplug.in
+--- origsrc/planner-0.14.4/libplanner/Makefile.am	2009-04-28 19:09:03.935875000 -0500
++++ src/planner-0.14.4/libplanner/Makefile.am	2009-04-28 19:12:22.592125000 -0500
+@@ -56,6 +56,7 @@ libplannerinclude_HEADERS = 			\
+ 	mrp-error.h				\
+ 	mrp-paths.h
+ 
++libplanner_1_la_LDFLAGS = -no-undefined
+ libplanner_1_la_LIBADD = $(LIBPLANNER_LIBS) -lm
+ 
+ libplannerincludedir = $(includedir)/planner-1.0/libplanner
+@@ -80,7 +81,7 @@ libstorage_mrproject_1_la_SOURCES = 		\
+ 	mrp-parser.c				\
+ 	mrp-parser.h
+ 
+-libstorage_mrproject_1_la_LDFLAGS =  -avoid-version -module
++libstorage_mrproject_1_la_LDFLAGS =  -avoid-version -module -no-undefined
+ libstorage_mrproject_1_la_LIBADD = libplanner-1.la
+ 
+ if HAVE_GDA
+@@ -90,7 +91,7 @@ libstorage_sql_la_SOURCES = 			\
+ 	mrp-sql.c				\
+ 	mrp-sql.h
+ 
+-libstorage_sql_la_LDFLAGS =  -avoid-version -module
++libstorage_sql_la_LDFLAGS =  -avoid-version -module -no-undefined
+ libstorage_sql_la_CFLAGS = $(GDA_CFLAGS) -DGDA_VERSION=@GDA_VER@
+ libstorage_sql_la_LIBADD =  $(GDA_LIBS) libplanner-1.la
+ endif
+@@ -110,12 +111,12 @@ libmrp_xml_la_SOURCES = 			\
+ 	mrp-old-xml.h
+ 
+ libmrp_xml_la_CFLAGS = -DDTDDIR=\""$(datadir)/planner/dtd"\"
+-libmrp_xml_la_LDFLAGS = -avoid-version -module
++libmrp_xml_la_LDFLAGS = -avoid-version -module -no-undefined
+ libmrp_xml_la_LIBADD = libplanner-1.la
+ 
+ libmrp_xsl_la_SOURCES = mrp-xsl.c
+ libmrp_xsl_la_CFLAGS = 	$(XSLT_CFLAGS) -DSTYLESHEETDIR=\""$(datadir)/planner/stylesheets"\"
+-libmrp_xsl_la_LDFLAGS = -avoid-version -module
++libmrp_xsl_la_LDFLAGS = -avoid-version -module -no-undefined
+ libmrp_xsl_la_LIBADD = $(XSLT_LIBS) libplanner-1.la
+ 
+ mrp-marshal.h: Makefile.am mrp-marshal.list
+--- origsrc/planner-0.14.4/python/Makefile.am	2009-04-28 19:09:03.951500000 -0500
++++ src/planner-0.14.4/python/Makefile.am	2009-04-28 19:18:57.545250000 -0500
+@@ -11,14 +11,14 @@ pkgpyexecdir = $(pyexecdir)
+ pkgpyexec_LTLIBRARIES = planner.la plannerui.la
+ 
+ planner_la_CFLAGS = -Wno-missing-declarations -Wno-missing-prototypes
+-planner_la_LDFLAGS = -module -avoid-version -export-symbols-regex initplanner
+-planner_la_LIBADD = $(LIBPLANNER_LIBS) $(top_builddir)/libplanner/libplanner-1.la
++planner_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols-regex initplanner
++planner_la_LIBADD = $(LIBPLANNER_LIBS) $(top_builddir)/libplanner/libplanner-1.la $(PYTHON_LDFLAGS)
+ planner_la_SOURCES = plannermodule.c
+ nodist_planner_la_SOURCES = planner.c
+ 
+ plannerui_la_CFLAGS = -Wno-missing-declarations -Wno-missing-prototypes
+-plannerui_la_LDFLAGS = -module -avoid-version -export-symbols-regex initplannerui
+-plannerui_la_LIBADD = $(PLANNER_LIBS) $(top_builddir)/libplanner/libplanner-1.la
++plannerui_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols-regex initplannerui
++plannerui_la_LIBADD = $(PLANNER_LIBS) $(top_builddir)/src/libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PYTHON_LDFLAGS)
+ plannerui_la_SOURCES = planneruimodule.c
+ nodist_plannerui_la_SOURCES = plannerui.c
+ 
+--- origsrc/planner-0.14.4/src/Makefile.am	2009-04-28 19:09:03.982750000 -0500
++++ src/planner-0.14.4/src/Makefile.am	2009-04-28 19:19:48.935875000 -0500
+@@ -24,8 +24,8 @@ planner_LDADD = \
+ 	$(PLANNER_LIBS)
+ 
+ 
+-# Create a convenience library to link our tests against
+-noinst_LTLIBRARIES = libplannerapp.la
++# Create a library to link our plugins and tests against
++lib_LTLIBRARIES = libplannerapp.la
+ 
+ libplannerapp_la_SOURCES = 			\
+ 	$(built_sources)		\
+@@ -162,6 +162,10 @@ usage_source = 				\
+ 	planner-usage-tree.c		\
+ 	planner-usage-tree.h
+ 
++libplannerapp_la_LDFLAGS = -avoid-version -no-undefined
++libplannerapp_la_LIBADD = \
++	$(top_builddir)/libplanner/libplanner-1.la \
++	$(PLANNER_LIBS)
+ 
+ #
+ # Plugins
+@@ -172,24 +176,24 @@ plugindir = $(libdir)/planner/plugins
+ if HAVE_GDA
+ sql_plugin = libsql-plugin.la
+ libsql_plugin_la_SOURCES = planner-sql-plugin.c
+-libsql_plugin_la_LIBADD =  $(GDA_LIBS)
++libsql_plugin_la_LIBADD = libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PLANNER_LIBS) $(GDA_LIBS)
+ libsql_plugin_la_CFLAGS = $(GDA_CFLAGS) -DGDA_VERSION=@GDA_VER@
+-libsql_plugin_la_LDFLAGS = -avoid-version -module
++libsql_plugin_la_LDFLAGS = -avoid-version -module -no-undefined
+ endif
+ 
+ if HAVE_PYTHON_PLUGIN
+ python_plugin = libpython-plugin.la
+ libpython_plugin_la_SOURCES = planner-python-plugin.c
+-libpython_plugin_la_LDFLAGS = -avoid-version -module
+-libpython_plugin_la_LIBADD  = $(PYTHON_LDFLAGS)
++libpython_plugin_la_LDFLAGS = -avoid-version -module -no-undefined
++libpython_plugin_la_LIBADD  = libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PLANNER_LIBS) $(PYTHON_LDFLAGS)
+ libpython_plugin_la_CFLAGS  = $(PYGTK_CFLAGS)
+ endif
+ 
+ if HAVE_EDS_PLUGIN
+ eds_plugin = libeds-plugin.la
+ libeds_plugin_la_SOURCES = planner-eds-plugin.c
+-libeds_plugin_la_LDFLAGS = -avoid-version -module
+-libeds_plugin_la_LIBADD  = $(EDS_LIBS)
++libeds_plugin_la_LDFLAGS = -avoid-version -module -no-undefined
++libeds_plugin_la_LIBADD  = libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PLANNER_LIBS) $(EDS_LIBS)
+ libeds_plugin_la_CFLAGS  = $(EDS_CFLAGS)
+ endif
+ 
+@@ -202,13 +206,16 @@ plugin_LTLIBRARIES = 			\
+ 	$(eds_plugin)
+ 
+ libhtml_plugin_la_SOURCES = planner-html-plugin.c
+-libhtml_plugin_la_LDFLAGS = -avoid-version -module
++libhtml_plugin_la_LDFLAGS = -avoid-version -module -no-undefined
++libhtml_plugin_la_LIBADD = libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PLANNER_LIBS)
+ 
+ libxmlplanner_plugin_la_SOURCES = planner-xml-planner-plugin.c
+-libxmlplanner_plugin_la_LDFLAGS = -avoid-version -module
++libxmlplanner_plugin_la_LDFLAGS = -avoid-version -module -no-undefined
++libxmlplanner_plugin_la_LIBADD = libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PLANNER_LIBS) $(XSLT_LIBS)
+ 
+ libmsp_plugin_la_SOURCES = planner-msp-plugin.c
+-libmsp_plugin_la_LDFLAGS = -avoid-version -module
++libmsp_plugin_la_LDFLAGS = -avoid-version -module -no-undefined
++libmsp_plugin_la_LIBADD = libplannerapp.la $(top_builddir)/libplanner/libplanner-1.la $(PLANNER_LIBS) $(XSLT_LIBS)
+ 
+ planner-marshal.h: Makefile.am planner-marshal.list
+ 	$(GLIB_GENMARSHAL) --prefix=planner_marshal $(srcdir)/planner-marshal.list --header > xgen-gmh \
