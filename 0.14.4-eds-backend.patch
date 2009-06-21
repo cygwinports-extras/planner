@@ -1,0 +1,66 @@
+--- origsrc/planner-0.14.4/configure.in	2009-06-21 04:58:29.968786800 -0500
++++ src/planner-0.14.4/configure.in	2009-06-21 13:22:12.375176500 -0500
+@@ -294,6 +294,22 @@ if test "x$enable_eds_backend" = "xyes" 
+     AC_SUBST(extensiondir)
+     plugindir=`$PKG_CONFIG --variable=plugindir evolution-plugin`
+     AC_SUBST(plugindir)
++    case $host_os in
++        cygwin*)
++            SOPFX="cyg"
++            SOEXT=".dll"
++            ;;
++        mingw*)
++            SOPFX="lib"
++            SOEXT=".dll"
++            ;;
++        *)
++            SOPFX="lib"
++            SOEXT=".so"
++            ;;
++    esac
++    AC_SUBST(SOPFX)
++    AC_SUBST(SOEXT)
+     use_eds_backend=yes
+ else
+     use_eds_backend=no
+--- origsrc/planner-0.14.4/eds-backend/Makefile.am	2009-04-28 19:09:03.920250000 -0500
++++ src/planner-0.14.4/eds-backend/Makefile.am	2009-04-28 19:12:22.576500000 -0500
+@@ -16,3 +16,5 @@ libecalbackendplanner_la_SOURCES =			\
+ libecalbackendplanner_la_LIBADD =		 	\
+ 	$(top_builddir)/libplanner/libplanner-1.la 	\
+ 	$(EDS_BACKEND_LIBS)				
++
++libecalbackendplanner_la_LDFLAGS = -module -avoid-version -no-undefined
+--- origsrc/planner-0.14.4/eds-backend/planner-source/Makefile.am	2009-04-28 19:09:03.935875000 -0500
++++ src/planner-0.14.4/eds-backend/planner-source/Makefile.am	2009-04-28 19:12:22.592125000 -0500
+@@ -4,14 +4,16 @@ INCLUDES =					\
+ 	$(EDS_BACKEND_CFLAGS)			
+ 
+ %.eplug: %.eplug.in
+-	sed -e 's|\@PLUGINDIR\@|$(plugindir)|' $< > $@
++	sed -e 's|\@PLUGINDIR\@|$(plugindir)|' \
++		-e 's|\@SOPFX\@|$(SOPFX)|' \
++		-e 's|\@SOEXT\@|$(SOEXT)|' \
++		$< > $@
+ 
+ plugin_DATA = org-gnome-planner-source.eplug
+ plugin_LTLIBRARIES = liborg-gnome-planner-source.la
+ 
+ 
+ liborg_gnome_planner_source_la_SOURCES = planner-source.c
+-liborg_gnome_planner_source_la_LDFLAGS = -module -avoid-version
++liborg_gnome_planner_source_la_LDFLAGS = -module -avoid-version -no-undefined
+ liborg_gnome_planner_source_la_LIBADD =	 $(EDS_BACKEND_LIBS)
+ 
+ EXTRA_DIST = org-gnome-planner-source.eplug.in
+--- origsrc/planner-0.14.4/eds-backend/planner-source/org-gnome-planner-source.eplug.in	2008-07-22 08:41:57.000000000 -0500
++++ src/planner-0.14.4/eds-backend/planner-source/org-gnome-planner-source.eplug.in	2009-06-21 13:22:28.196668200 -0500
+@@ -2,7 +2,7 @@
+ <e-plugin-list>
+     <e-plugin
+      type="shlib"
+-     location="@PLUGINDIR@/liborg-gnome-planner-source.so"
++     location="@PLUGINDIR@/@SOPFX@org-gnome-planner-source@SOEXT@"
+      id="org.gnome.evolution.plugin.planner-source"
+      name="Planner Sources">
+ 	<description>Create Planner file sources to access tasks from Evolution</description>

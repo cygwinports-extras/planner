@@ -1,0 +1,6 @@
+category: Gnome Python
+requires: libgcc1 libglib2.0_0 libplanner1_0 python python-gobject2
+external-source: planner
+sdesc: "Python bindings for the GNOME Planner library"
+ldesc: "Planner is a project managment tool for the GNOME desktop, for 
+planning, scheduling and tracking projects."
