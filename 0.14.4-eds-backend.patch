@@ -33,7 +33,7 @@
 +libecalbackendplanner_la_LDFLAGS = -module -avoid-version -no-undefined
 --- origsrc/planner-0.14.4/eds-backend/planner-source/Makefile.am	2009-04-28 19:09:03.935875000 -0500
 +++ src/planner-0.14.4/eds-backend/planner-source/Makefile.am	2009-04-28 19:12:22.592125000 -0500
-@@ -4,14 +4,16 @@ INCLUDES =					\
+@@ -4,14 +4,17 @@ INCLUDES =					\
  	$(EDS_BACKEND_CFLAGS)			
  
  %.eplug: %.eplug.in
