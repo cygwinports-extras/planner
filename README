@@ -4,48 +4,46 @@ Planner is a project managment tool for the GNOME desktop, for planning,
 scheduling and tracking projects.
 
 Runtime requirements:
-  cygwin-1.7.0-45
+  cygwin-1.7.1-1
   libart_lgpl_2_2-2.3.20-10
-  libatk1.0_0-1.26.0-1
-  libcairo2-1.8.6-10
-  libebook1.2_9-2.26.2-1
-  libecal1.2_7-2.26.2-1
-  libedata-cal1.2_6-2.26.2-1
-  libedataserver1.2_11-2.26.2-1
-  libgcc1-4.3.2-2
-  libgconf2_4-2.26.0-1
-  libgda3.0_3-3.0.4-10
-  libgda3.0-provider-postgres-3.0.4-10
-  libgdk_pixbuf2.0_0-2.16.1-1
+  libatk1.0_0-1.28.0-1
+  libcairo2-1.8.8-1
+  libebook1.2_9-2.28.2-1
+  libecal1.2_7-2.28.2-1
+  libedata-cal1.2_6-2.28.2-1
+  libedataserver1.2_11-2.28.2-1
+  libgcc1-4.3.4-3
+  libgconf2_4-2.28.0-1
+  libgdk_pixbuf2.0_0-2.18.6-1
   libglade2.0_0-2.6.4-1
-  libglib2.0_0-2.20.1-1
-  libgnome2_0-2.26.0-1
+  libglib2.0_0-2.22.4-2
+  libgnome2_0-2.28.0-1
   libgnomecanvas2_0-2.26.0-1
-  libgnomeui2_0-2.24.1-1
-  libgtk2.0_0-2.16.1-1
-  libintl8-0.17-10
-  libpango1.0_0-1.24.1-1
-  libxml2-2.7.3-10
-  libxslt-1.1.24-10
+  libgnomeui2_0-2.24.2-1
+  libgtk2.0_0-2.18.6-1
+  libintl8-0.17-11
+  libpango1.0_0-1.26.2-1
+  libxml2-2.7.6-1
+  libxslt-1.1.26-1
   python-2.5.4-10
-  python-gobject2-2.16.1-10
-  python-gtk2-2.14.1-1
+  python-gobject2.0-2.20.0-1
+  python-gtk2.0-2.16.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
+  autoconf2.5-2.65-1
   automake1.9-1.9.6-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  gnome-common-2.26.0-1
-  gtk-doc-1.11-2
+  binutils-2.19.51-1
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  gnome-common-2.28.0-1
+  gtk-doc-1.13-1
   intltool-0.40.6-1
-  libtool-2.2.7a-12
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
-  rarian-0.8.1-10
+  rarian-0.8.1-12
   sed-4.1.5-2
 
 Canonical website:
@@ -74,332 +72,10 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary package:
-
-(planner)
-  /etc/gconf/schemas/planner.schemas
-  /etc/postinstall/planner.sh
-  /etc/preremove/planner.sh
-  /usr/bin/cygplannerapp.dll
-  /usr/bin/planner.exe
-  /usr/lib/planner/plugins/cygeds-plugin.dll
-  /usr/lib/planner/plugins/cyghtml-plugin.dll
-  /usr/lib/planner/plugins/cygmsp-plugin.dll
-  /usr/lib/planner/plugins/cygpython-plugin.dll
-  /usr/lib/planner/plugins/cygsql-plugin.dll
-  /usr/lib/planner/plugins/cygxmlplanner-plugin.dll
-  /usr/lib/planner/plugins/libeds-plugin.la
-  /usr/lib/planner/plugins/libhtml-plugin.la
-  /usr/lib/planner/plugins/libmsp-plugin.la
-  /usr/lib/planner/plugins/libpython-plugin.la
-  /usr/lib/planner/plugins/libsql-plugin.la
-  /usr/lib/planner/plugins/libxmlplanner-plugin.la
-  /usr/share/applications/planner.desktop
-  /usr/share/doc/planner/AUTHORS
-  /usr/share/doc/planner/COPYING
-  /usr/share/doc/planner/ChangeLog
-  /usr/share/doc/planner/NEWS
-  /usr/share/doc/planner/README
-  /usr/share/doc/planner/README.sql
-  /usr/share/doc/planner/kitchen.planner
-  /usr/share/doc/planner/sample-1.planner
-  /usr/share/gnome/help/planner/C/figures/calendar-new.png
-  /usr/share/gnome/help/planner/C/figures/calendar-week.png
-  /usr/share/gnome/help/planner/C/figures/calendar-working-time.png
-  /usr/share/gnome/help/planner/C/figures/calendar.png
-  /usr/share/gnome/help/planner/C/figures/day-types.png
-  /usr/share/gnome/help/planner/C/figures/eds1.png
-  /usr/share/gnome/help/planner/C/figures/gantt-view.png
-  /usr/share/gnome/help/planner/C/figures/group1-subtask-dialog.png
-  /usr/share/gnome/help/planner/C/figures/group1-subtasks.png
-  /usr/share/gnome/help/planner/C/figures/group1-task-linked.png
-  /usr/share/gnome/help/planner/C/figures/group1-task-linking.png
-  /usr/share/gnome/help/planner/C/figures/group1-task.png
-  /usr/share/gnome/help/planner/C/figures/group1-tasks-linked.png
-  /usr/share/gnome/help/planner/C/figures/new-project.png
-  /usr/share/gnome/help/planner/C/figures/print-project-paper.png
-  /usr/share/gnome/help/planner/C/figures/print-project-selectviews.png
-  /usr/share/gnome/help/planner/C/figures/print-project.png
-  /usr/share/gnome/help/planner/C/figures/project-properties-custom-add.png
-  /usr/share/gnome/help/planner/C/figures/project-properties-custom.png
-  /usr/share/gnome/help/planner/C/figures/project-properties.png
-  /usr/share/gnome/help/planner/C/figures/project-zoom-fit.png
-  /usr/share/gnome/help/planner/C/figures/project-zoom-up.png
-  /usr/share/gnome/help/planner/C/figures/resource-editor-sorted.png
-  /usr/share/gnome/help/planner/C/figures/resource-editor.png
-  /usr/share/gnome/help/planner/C/figures/resource-group-editor.png
-  /usr/share/gnome/help/planner/C/figures/resource-insert.png
-  /usr/share/gnome/help/planner/C/figures/resource-properties-calendar.png
-  /usr/share/gnome/help/planner/C/figures/resource-properties-general.png
-  /usr/share/gnome/help/planner/C/figures/resource-usage-view.png
-  /usr/share/gnome/help/planner/C/figures/several-projects.png
-  /usr/share/gnome/help/planner/C/figures/task-constraints.png
-  /usr/share/gnome/help/planner/C/figures/task-custom-properties-add.png
-  /usr/share/gnome/help/planner/C/figures/task-custom-properties.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-advanced.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-note.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-predecessors-add-remove.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-predecessors-add.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-predecessors.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-resource-assigned.png
-  /usr/share/gnome/help/planner/C/figures/task-edit-resources.png
-  /usr/share/gnome/help/planner/C/figures/task-edit.png
-  /usr/share/gnome/help/planner/C/figures/task-insert.png
-  /usr/share/gnome/help/planner/C/figures/task-properties-dialog.png
-  /usr/share/gnome/help/planner/C/figures/task-up.png
-  /usr/share/gnome/help/planner/C/figures/task-view.png
-  /usr/share/gnome/help/planner/C/legal.xml
-  /usr/share/gnome/help/planner/C/planner.xml
-  /usr/share/gnome/help/planner/eu/figures/calendar-new.png
-  /usr/share/gnome/help/planner/eu/figures/calendar-week.png
-  /usr/share/gnome/help/planner/eu/figures/calendar-working-time.png
-  /usr/share/gnome/help/planner/eu/figures/calendar.png
-  /usr/share/gnome/help/planner/eu/figures/day-types.png
-  /usr/share/gnome/help/planner/eu/figures/eds1.png
-  /usr/share/gnome/help/planner/eu/figures/gantt-view.png
-  /usr/share/gnome/help/planner/eu/figures/group1-subtask-dialog.png
-  /usr/share/gnome/help/planner/eu/figures/group1-subtasks.png
-  /usr/share/gnome/help/planner/eu/figures/group1-task-linked.png
-  /usr/share/gnome/help/planner/eu/figures/group1-task-linking.png
-  /usr/share/gnome/help/planner/eu/figures/group1-task.png
-  /usr/share/gnome/help/planner/eu/figures/group1-tasks-linked.png
-  /usr/share/gnome/help/planner/eu/figures/new-project.png
-  /usr/share/gnome/help/planner/eu/figures/print-project-paper.png
-  /usr/share/gnome/help/planner/eu/figures/print-project-selectviews.png
-  /usr/share/gnome/help/planner/eu/figures/print-project.png
-  /usr/share/gnome/help/planner/eu/figures/project-properties-custom-add.png
-  /usr/share/gnome/help/planner/eu/figures/project-properties-custom.png
-  /usr/share/gnome/help/planner/eu/figures/project-properties.png
-  /usr/share/gnome/help/planner/eu/figures/project-zoom-fit.png
-  /usr/share/gnome/help/planner/eu/figures/project-zoom-up.png
-  /usr/share/gnome/help/planner/eu/figures/resource-editor-sorted.png
-  /usr/share/gnome/help/planner/eu/figures/resource-editor.png
-  /usr/share/gnome/help/planner/eu/figures/resource-group-editor.png
-  /usr/share/gnome/help/planner/eu/figures/resource-insert.png
-  /usr/share/gnome/help/planner/eu/figures/resource-properties-calendar.png
-  /usr/share/gnome/help/planner/eu/figures/resource-properties-general.png
-  /usr/share/gnome/help/planner/eu/figures/resource-usage-view.png
-  /usr/share/gnome/help/planner/eu/figures/several-projects.png
-  /usr/share/gnome/help/planner/eu/figures/task-constraints.png
-  /usr/share/gnome/help/planner/eu/figures/task-custom-properties-add.png
-  /usr/share/gnome/help/planner/eu/figures/task-custom-properties.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-advanced.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-note.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-predecessors-add-remove.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-predecessors-add.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-predecessors.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-resource-assigned.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit-resources.png
-  /usr/share/gnome/help/planner/eu/figures/task-edit.png
-  /usr/share/gnome/help/planner/eu/figures/task-insert.png
-  /usr/share/gnome/help/planner/eu/figures/task-properties-dialog.png
-  /usr/share/gnome/help/planner/eu/figures/task-up.png
-  /usr/share/gnome/help/planner/eu/figures/task-view.png
-  /usr/share/gnome/help/planner/eu/legal.xml
-  /usr/share/gnome/help/planner/eu/planner.xml
-  /usr/share/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-planner.png
-  /usr/share/locale/am/LC_MESSAGES/planner.mo
-  /usr/share/locale/ar/LC_MESSAGES/planner.mo
-  /usr/share/locale/az/LC_MESSAGES/planner.mo
-  /usr/share/locale/be/LC_MESSAGES/planner.mo
-  /usr/share/locale/bg/LC_MESSAGES/planner.mo
-  /usr/share/locale/ca/LC_MESSAGES/planner.mo
-  /usr/share/locale/cs/LC_MESSAGES/planner.mo
-  /usr/share/locale/da/LC_MESSAGES/planner.mo
-  /usr/share/locale/de/LC_MESSAGES/planner.mo
-  /usr/share/locale/dz/LC_MESSAGES/planner.mo
-  /usr/share/locale/el/LC_MESSAGES/planner.mo
-  /usr/share/locale/en_CA/LC_MESSAGES/planner.mo
-  /usr/share/locale/en_GB/LC_MESSAGES/planner.mo
-  /usr/share/locale/es/LC_MESSAGES/planner.mo
-  /usr/share/locale/et/LC_MESSAGES/planner.mo
-  /usr/share/locale/eu/LC_MESSAGES/planner.mo
-  /usr/share/locale/fa/LC_MESSAGES/planner.mo
-  /usr/share/locale/fi/LC_MESSAGES/planner.mo
-  /usr/share/locale/fr/LC_MESSAGES/planner.mo
-  /usr/share/locale/ga/LC_MESSAGES/planner.mo
-  /usr/share/locale/gl/LC_MESSAGES/planner.mo
-  /usr/share/locale/gu/LC_MESSAGES/planner.mo
-  /usr/share/locale/hi/LC_MESSAGES/planner.mo
-  /usr/share/locale/hr/LC_MESSAGES/planner.mo
-  /usr/share/locale/hu/LC_MESSAGES/planner.mo
-  /usr/share/locale/id/LC_MESSAGES/planner.mo
-  /usr/share/locale/is/LC_MESSAGES/planner.mo
-  /usr/share/locale/it/LC_MESSAGES/planner.mo
-  /usr/share/locale/ja/LC_MESSAGES/planner.mo
-  /usr/share/locale/kn/LC_MESSAGES/planner.mo
-  /usr/share/locale/ko/LC_MESSAGES/planner.mo
-  /usr/share/locale/lt/LC_MESSAGES/planner.mo
-  /usr/share/locale/lv/LC_MESSAGES/planner.mo
-  /usr/share/locale/mk/LC_MESSAGES/planner.mo
-  /usr/share/locale/ml/LC_MESSAGES/planner.mo
-  /usr/share/locale/mn/LC_MESSAGES/planner.mo
-  /usr/share/locale/mr/LC_MESSAGES/planner.mo
-  /usr/share/locale/ms/LC_MESSAGES/planner.mo
-  /usr/share/locale/nb/LC_MESSAGES/planner.mo
-  /usr/share/locale/ne/LC_MESSAGES/planner.mo
-  /usr/share/locale/nl/LC_MESSAGES/planner.mo
-  /usr/share/locale/nn/LC_MESSAGES/planner.mo
-  /usr/share/locale/oc/LC_MESSAGES/planner.mo
-  /usr/share/locale/pa/LC_MESSAGES/planner.mo
-  /usr/share/locale/pl/LC_MESSAGES/planner.mo
-  /usr/share/locale/pt/LC_MESSAGES/planner.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/planner.mo
-  /usr/share/locale/ru/LC_MESSAGES/planner.mo
-  /usr/share/locale/rw/LC_MESSAGES/planner.mo
-  /usr/share/locale/sk/LC_MESSAGES/planner.mo
-  /usr/share/locale/sl/LC_MESSAGES/planner.mo
-  /usr/share/locale/sq/LC_MESSAGES/planner.mo
-  /usr/share/locale/sr/LC_MESSAGES/planner.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/planner.mo
-  /usr/share/locale/sv/LC_MESSAGES/planner.mo
-  /usr/share/locale/ta/LC_MESSAGES/planner.mo
-  /usr/share/locale/tr/LC_MESSAGES/planner.mo
-  /usr/share/locale/uk/LC_MESSAGES/planner.mo
-  /usr/share/locale/vi/LC_MESSAGES/planner.mo
-  /usr/share/locale/zh_CN/LC_MESSAGES/planner.mo
-  /usr/share/locale/zh_HK/LC_MESSAGES/planner.mo
-  /usr/share/locale/zh_TW/LC_MESSAGES/planner.mo
-  /usr/share/man/man1/planner.1.gz
-  /usr/share/mime/packages/planner.xml
-  /usr/share/omf/planner/planner-C.omf
-  /usr/share/omf/planner/planner-eu.omf
-  /usr/share/pixmaps/gnome-planner.png
-  /usr/share/planner/dtd/mrproject-0.5.1.dtd
-  /usr/share/planner/dtd/mrproject-0.6.dtd
-  /usr/share/planner/glade/add-predecessor.glade
-  /usr/share/planner/glade/calendar-dialog.glade
-  /usr/share/planner/glade/column-dialog.glade
-  /usr/share/planner/glade/eds.glade
-  /usr/share/planner/glade/group-dialog.glade
-  /usr/share/planner/glade/new-property.glade
-  /usr/share/planner/glade/project-properties.glade
-  /usr/share/planner/glade/property-dialog.glade
-  /usr/share/planner/glade/resource-dialog.glade
-  /usr/share/planner/glade/resource-input-dialog.glade
-  /usr/share/planner/glade/sql.glade
-  /usr/share/planner/glade/task-date-widget.glade
-  /usr/share/planner/glade/task-dialog.glade
-  /usr/share/planner/glade/task-input-dialog.glade
-  /usr/share/planner/images/24_edit_resource.png
-  /usr/share/planner/images/24_groups.png
-  /usr/share/planner/images/24_indent_task.png
-  /usr/share/planner/images/24_insert_resource.png
-  /usr/share/planner/images/24_insert_task.png
-  /usr/share/planner/images/24_link_task.png
-  /usr/share/planner/images/24_remove_resource.png
-  /usr/share/planner/images/24_remove_task.png
-  /usr/share/planner/images/24_task_down.png
-  /usr/share/planner/images/24_task_up.png
-  /usr/share/planner/images/24_unindent_task.png
-  /usr/share/planner/images/24_unlink_task.png
-  /usr/share/planner/images/gantt.png
-  /usr/share/planner/images/gnome-planner.png
-  /usr/share/planner/images/resources.png
-  /usr/share/planner/images/resources_usage.png
-  /usr/share/planner/images/tasks.png
-  /usr/share/planner/sql/database-0.11.sql
-  /usr/share/planner/sql/database-0.13.sql
-  /usr/share/planner/sql/database.sql
-  /usr/share/planner/sql/upgrade-0.11-0.13.sql
-  /usr/share/planner/sql/upgrade-0.6.x-0.11.sql
-  /usr/share/planner/stylesheets/html1_css.xsl
-  /usr/share/planner/stylesheets/html1_css_ie.xsl
-  /usr/share/planner/stylesheets/html1_css_ie7.xsl
-  /usr/share/planner/stylesheets/html1_gantt.xsl
-  /usr/share/planner/stylesheets/html1_resources.xsl
-  /usr/share/planner/stylesheets/html1_tasks.xsl
-  /usr/share/planner/stylesheets/localizable.xml
-  /usr/share/planner/stylesheets/msp2planner.xsl
-  /usr/share/planner/stylesheets/planner2html.xsl
-  /usr/share/planner/stylesheets/planner2plannerv011.xsl
-  /usr/share/planner/ui/eds-plugin.ui
-  /usr/share/planner/ui/gantt-view.ui
-  /usr/share/planner/ui/html-plugin.ui
-  /usr/share/planner/ui/main-window.ui
-  /usr/share/planner/ui/msp-plugin.ui
-  /usr/share/planner/ui/resource-view.ui
-  /usr/share/planner/ui/sql-plugin.ui
-  /usr/share/planner/ui/task-view.ui
-  /usr/share/planner/ui/time-table-view.ui
-  /usr/share/planner/ui/xml-planner-plugin.ui
-
-(libplanner1_0)
-  /usr/bin/cygplanner-1-0.dll
-  /usr/lib/planner/file-modules/cygmrp-xml.dll
-  /usr/lib/planner/file-modules/cygmrp-xsl.dll
-  /usr/lib/planner/file-modules/libmrp-xml.la
-  /usr/lib/planner/file-modules/libmrp-xsl.la
-  /usr/lib/planner/storage-modules/cygstorage-mrproject-1.dll
-  /usr/lib/planner/storage-modules/cygstorage-sql.dll
-  /usr/lib/planner/storage-modules/libstorage-mrproject-1.la
-  /usr/lib/planner/storage-modules/libstorage-sql.la
-
-(libplanner1-devel)
-  /usr/include/planner-1.0/libplanner/mrp-application.h
-  /usr/include/planner-1.0/libplanner/mrp-assignment.h
-  /usr/include/planner-1.0/libplanner/mrp-calendar.h
-  /usr/include/planner-1.0/libplanner/mrp-day.h
-  /usr/include/planner-1.0/libplanner/mrp-error.h
-  /usr/include/planner-1.0/libplanner/mrp-group.h
-  /usr/include/planner-1.0/libplanner/mrp-object.h
-  /usr/include/planner-1.0/libplanner/mrp-paths.h
-  /usr/include/planner-1.0/libplanner/mrp-project.h
-  /usr/include/planner-1.0/libplanner/mrp-property.h
-  /usr/include/planner-1.0/libplanner/mrp-relation.h
-  /usr/include/planner-1.0/libplanner/mrp-resource.h
-  /usr/include/planner-1.0/libplanner/mrp-storage-module.h
-  /usr/include/planner-1.0/libplanner/mrp-task.h
-  /usr/include/planner-1.0/libplanner/mrp-time.h
-  /usr/include/planner-1.0/libplanner/mrp-types.h
-  /usr/include/planner-1.0/libplanner/planner.h
-  /usr/lib/libplanner-1.dll.a
-  /usr/lib/libplanner-1.la
-  /usr/lib/libplannerapp.dll.a
-  /usr/lib/libplannerapp.la
-  /usr/lib/pkgconfig/libplanner-1.pc
-  /usr/share/gtk-doc/html/libplanner/MrpAssignment.html
-  /usr/share/gtk-doc/html/libplanner/MrpCalendar.html
-  /usr/share/gtk-doc/html/libplanner/MrpGroup.html
-  /usr/share/gtk-doc/html/libplanner/MrpObject.html
-  /usr/share/gtk-doc/html/libplanner/MrpProject.html
-  /usr/share/gtk-doc/html/libplanner/MrpResource.html
-  /usr/share/gtk-doc/html/libplanner/MrpTask.html
-  /usr/share/gtk-doc/html/libplanner/ch01.html
-  /usr/share/gtk-doc/html/libplanner/home.png
-  /usr/share/gtk-doc/html/libplanner/index.html
-  /usr/share/gtk-doc/html/libplanner/index.sgml
-  /usr/share/gtk-doc/html/libplanner/left.png
-  /usr/share/gtk-doc/html/libplanner/libplanner-MrpApplication.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-MrpRelation.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-day.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-error.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-property.html
-  /usr/share/gtk-doc/html/libplanner/libplanner-mrp-time.html
-  /usr/share/gtk-doc/html/libplanner/libplanner.devhelp
-  /usr/share/gtk-doc/html/libplanner/libplanner.devhelp2
-  /usr/share/gtk-doc/html/libplanner/right.png
-  /usr/share/gtk-doc/html/libplanner/style.css
-  /usr/share/gtk-doc/html/libplanner/up.png
-
-(evolution-planner)
-  /usr/lib/evolution-data-server-1.2/extensions/cygecalbackendplanner.dll
-  /usr/lib/evolution-data-server-1.2/extensions/libecalbackendplanner.la
-  /usr/lib/evolution/2.26/plugins/cygorg-gnome-planner-source.dll
-  /usr/lib/evolution/2.26/plugins/liborg-gnome-planner-source.la
-  /usr/lib/evolution/2.26/plugins/org-gnome-planner-source.eplug
-
-(python-planner)
-  /usr/lib/python2.5/site-packages/planner.dll
-  /usr/lib/python2.5/site-packages/planner.la
-
-(python-plannerui)
-  /usr/lib/python2.5/site-packages/plannerui.dll
-  /usr/lib/python2.5/site-packages/plannerui.la
-
-------------------
-
 Port Notes:
+
+----- version 0.14.4-3 -----
+Disabled deprecated libgda-3.0 support.
 
 ----- version 0.14.4-2 -----
 Enabled Evolution support and rearranged packages accordingly.

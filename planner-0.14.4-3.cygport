@@ -3,10 +3,13 @@ inherit python gnome2
 DESCRIPTION="GNOME project management tool"
 HOMEPAGE="http://live.gnome.org/Planner"
 
-PATCH_URI="0.14.4-no-undefined.patch
-           0.14.3-gtk_recent_manager.patch
-           0.14.4-pkgconfig.patch
-           0.14.4-eds-backend.patch"
+PATCH_URI="
+	0.14.4-no-undefined.patch
+	0.14.3-gtk_recent_manager.patch
+	0.14.4-pkgconfig.patch
+	0.14.4-eds-backend.patch
+	0.14.4-gtk-doc1.13.patch
+"
 
 PKG_NAMES="${PN} libplanner1_0 libplanner1-devel evolution-planner python-planner python-plannerui"
 planner_CONTENTS="etc/ usr/bin/cygplannerapp.dll usr/bin/planner.exe
@@ -19,11 +22,12 @@ python_plannerui_CONTENTS="${PYTHON_SITELIB#/}/plannerui.*"
 
 DISTCLEANFILES="libplanner-1.pc"
 
+# database: uses obsolete libgda-3.0
 CYGCONF_ARGS="
 	--disable-update-mimedb
 	--enable-eds
 	--enable-eds-backend
 	--enable-python
 	--enable-python-plugin
-	--with-database
+	--without-database
 "

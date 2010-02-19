@@ -1,5 +1,5 @@
 category: Gnome
-requires: libgcc1 libgda3.0_3 libgda3.0-provider-postgres libglib2.0 libintl8 libxml2 libxslt
+requires: libgcc1 libglib2.0 libintl8 libxml2 libxslt
 external-source: planner
 sdesc: "GNOME project management tool (library)"
 ldesc: "Planner is a project managment tool for the GNOME desktop, for 
