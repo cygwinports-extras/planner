@@ -11,22 +11,23 @@ PATCH_URI="
 	0.14.4-gtk-doc1.13.patch
 "
 
-PKG_NAMES="${PN} libplanner1_0 libplanner1-devel evolution-planner python-planner python-plannerui"
+PKG_NAMES="${PN} libplanner1_0 libplanner1-devel python-planner python-plannerui" # evolution-planner
 planner_CONTENTS="etc/ usr/bin/cygplannerapp.dll usr/bin/planner.exe
                   usr/lib/planner/plugins/ usr/share/"
 libplanner1_0_CONTENTS="usr/bin/*-1-0.dll usr/lib/planner/*-modules/"
 libplanner1_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
-evolution_planner_CONTENTS="usr/lib/evolution*/"
+#evolution_planner_CONTENTS="usr/lib/evolution*/"
 python_planner_CONTENTS="${PYTHON_SITELIB#/}/planner.*"
 python_plannerui_CONTENTS="${PYTHON_SITELIB#/}/plannerui.*"
 
 DISTCLEANFILES="libplanner-1.pc"
 
 # database: uses obsolete libgda-3.0
+# eds-backend: incompatible with evolution-2.30 ?
 CYGCONF_ARGS="
 	--disable-update-mimedb
 	--enable-eds
-	--enable-eds-backend
+	--disable-eds-backend
 	--enable-python
 	--enable-python-plugin
 	--without-database
