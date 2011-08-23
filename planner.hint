@@ -1,5 +1,5 @@
 category: Gnome
-requires: GConf2 libart_lgpl_2_2 libatk1.0_0 libcairo2 libebook1.2_10 libedataserver1.2_14 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgnome2_0 libgnomecanvas2_0 libgnomeui2_0 libgtk2.0_0 libintl8 libpango1.0_0 libplanner1_0 libxml2 libxslt
+requires: GConf2 libart_lgpl_2_2 libatk1.0_0 libcairo2 libebook1.2_10 libedataserver1.2_14 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgnomecanvas2_0 libgtk2.0_0 libintl8 libpango1.0_0 libplanner1_0 libxml2 libxslt
 sdesc: "GNOME project management tool"
 ldesc: "Planner is a project managment tool for the GNOME desktop, for 
 planning, scheduling and tracking projects."

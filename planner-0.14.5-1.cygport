@@ -5,7 +5,6 @@ HOMEPAGE="http://live.gnome.org/Planner"
 
 PATCH_URI="
 	0.14.4-no-undefined.patch
-	0.14.3-gtk_recent_manager.patch
 	0.14.4-pkgconfig.patch
 	0.14.4-eds-backend.patch
 	0.14.4-gtk-doc1.13.patch
