@@ -31,3 +31,5 @@ CYGCONF_ARGS="
 	--enable-python-plugin
 	--without-database
 "
+
+KEEP_LA_FILES="none"
