@@ -1,0 +1,53 @@
+inherit python gnome2
+
+NAME="planner"
+VERSION=0.14.6
+RELEASE=3
+CATEGORY="GNOME"
+SUMMARY="GNOME project management tool"
+DESCRIPTION="Planner is a project managment tool for the GNOME desktop, for
+planning, scheduling and tracking projects."
+HOMEPAGE="http://live.gnome.org/Planner"
+
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome596173-xdg.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome596966-editoninsert.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome550559-fitzoom.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome603693-planner-calendar-for-edittask.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome604169-comboboxentry.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome604510.calcolors.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome604531-tooltips.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome581282-printpreview.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome606824-notecolumn.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome341504-paste.tasks.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome615641-multiselect.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-gnome655803-bad-LC_TIME.patch
+	http://pkgs.fedoraproject.org/cgit/planner.git/plain/planner-desktop-warnings.patch
+	0.14.4-no-undefined.patch
+	0.14.4-pkgconfig.patch
+	0.14.4-gtk-doc1.13.patch
+"
+
+PKG_NAMES="${PN} libplanner1_0 libplanner1-devel python-planner" # evolution-planner
+planner_REQUIRES="python-gobject python-gtk2.0 python-planner"
+planner_CONTENTS="etc/ usr/bin/cygplannerapp.dll usr/bin/planner.exe
+                  usr/lib/planner/plugins/ ${PYTHON_SITELIB#/}/plannerui.* usr/share/"
+libplanner1_0_CONTENTS="usr/bin/*-1-0.dll usr/lib/planner/*-modules/"
+libplanner1_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+#evolution_planner_CONTENTS="usr/lib/evolution*/"
+python_planner_REQUIRES="python-gobject"
+python_planner_CONTENTS="${PYTHON_SITELIB#/}/planner.*"
+
+DISTCLEANFILES="libplanner-1.pc"
+
+# database: uses obsolete libgda-3.0
+# eds-backend: incompatible with evolution-2.30 ?
+# eds: incompatible with e-d-s 3.6
+CYGCONF_ARGS="
+	--disable-update-mimedb
+	--disable-eds
+	--disable-eds-backend
+	--enable-python
+	--enable-python-plugin
+	--without-database
+"

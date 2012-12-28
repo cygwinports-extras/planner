@@ -1,6 +1,0 @@
-category: Gnome
-requires: libplanner1_0 libglib2.0-devel libxml2-devel
-external-source: planner
-sdesc: "GNOME project management tool (development)"
-ldesc: "Planner is a project managment tool for the GNOME desktop, for 
-planning, scheduling and tracking projects."
