@@ -2,7 +2,7 @@ inherit python gnome2
 
 NAME="planner"
 VERSION=0.14.6
-RELEASE=3
+RELEASE=4
 CATEGORY="GNOME"
 SUMMARY="GNOME project management tool"
 DESCRIPTION="Planner is a project managment tool for the GNOME desktop, for
